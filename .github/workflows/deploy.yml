@@ -1,0 +1,30 @@
+name: Build and Upload
+
+on: [push]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Build
+        run: |
+          for dir in examples/*; do
+            if [ -d "$dir" ]; then
+              TIMESTAMP=$(date +%s)
+              CONTAINER_NAME="runner-$TIMESTAMP"
+              docker run  -v $PWD/$dir/story.json:/app/packages/ui/src/story.json --name $CONTAINER_NAME yanzhen/step-saga:v0.1
+              docker cp $CONTAINER_NAME:/app/packages/ui/dist/. $PWD/$dir
+            fi
+          done
+
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: f67f7d9f78d073126cf54c90c3c24412
+          projectName: step-saga-examples
+          directory: ./examples
