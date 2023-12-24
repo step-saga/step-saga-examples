@@ -16,7 +16,7 @@ jobs:
             if [ -d "$dir" ]; then
               TIMESTAMP=$(date +%s)
               CONTAINER_NAME="runner-$TIMESTAMP"
-              docker run  -v $PWD/$dir/story.json:/app/packages/ui/src/story.json --name $CONTAINER_NAME yanzhen/step-saga:v0.1
+              docker run  -v $PWD/$dir/story.json:/app/packages/ui/src/story.json --name $CONTAINER_NAME yanzhen/step-saga:v0.3
               docker cp $CONTAINER_NAME:/app/packages/ui/dist/. $PWD/$dir
             fi
           done
