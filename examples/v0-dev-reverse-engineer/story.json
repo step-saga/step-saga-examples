@@ -52,7 +52,7 @@
         {
           "type": "static-markdown",
           "data": {
-            "content": "## introduction\n\nDiscovering Vercel's [v0.dev](https://v0.dev/) project sparked my curiosity due to its exceptional output quality.\n\nMy interest intensified while developing a similar 'text/image-to-code' AI application for work, where achieving stable code generation and varied results posed significant challenges.\n\nThis led me to reverse engineer v0.dev, seeking to decode its underlying technology.\n\n![v0.dev](https://raw.githubusercontent.com/Yuyz0112/vx.dev/main/preview-ui/public/logo.jpg)\n\nMy journey culminated in the open-source project [vx.dev](https://github.com/Yuyz0112/vx.dev), revealing the amplified potential of an open-source framework.\n"
+            "content": "# How I Reverse Engineered Vercel's v0.dev Prompt and Code Optimization Logic\n\n## introduction\n\nDiscovering Vercel's [v0.dev](https://v0.dev/) project sparked my curiosity due to its exceptional output quality.\n\nMy interest intensified while developing a similar 'text/image-to-code' AI application for work, where achieving stable code generation and varied results posed significant challenges.\n\nThis led me to reverse engineer v0.dev, seeking to decode its underlying technology.\n\n![v0.dev](https://raw.githubusercontent.com/Yuyz0112/vx.dev/main/preview-ui/public/logo.jpg)\n\nMy journey culminated in the open-source project [vx.dev](https://github.com/Yuyz0112/vx.dev), revealing the amplified potential of an open-source framework.\n"
           }
         },
         {
